@@ -1,0 +1,42 @@
+* text=auto eol=lf
+
+*.cs       text eol=lf
+*.csproj   text eol=lf
+*.sln      text eol=lf
+*.props    text eol=lf
+*.targets  text eol=lf
+
+*.bazel    text eol=lf
+*.bzl      text eol=lf
+*.bazelrc  text eol=lf
+BUILD      text eol=lf
+WORKSPACE  text eol=lf
+*.lock     text eol=lf
+
+*.md       text eol=lf
+*.MD       text eol=lf
+*.json     text eol=lf
+*.xml      text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.toml     text eol=lf
+*.sh       text eol=lf
+*.ps1      text eol=lf
+
+*.jar      binary
+*.dll      binary
+*.exe      binary
+*.pdb      binary
+*.nupkg    binary
+*.snupkg   binary
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.pdf      binary
+*.zip      binary
+*.gz       binary
+
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
