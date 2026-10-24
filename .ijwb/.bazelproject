@@ -1,0 +1,4 @@
+directories:
+  src/cs
+targets:
+  //src/cs:all

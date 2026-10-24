@@ -1,0 +1,9 @@
+# --- 启动选项 (Startup Options) ---
+# 必须在 Bazel 命令执行前加载，用于设置核心环境
+startup --windows_enable_symlinks
+startup --output_user_root=C:/_bzl
+build --incompatible_strict_action_env=false
+
+# --- 构建选项 (Build Options) ---
+# 用于控制构建过程的行为
+build --enable_runfiles

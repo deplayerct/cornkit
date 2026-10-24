@@ -1,0 +1,77 @@
+# --- Bazel ---
+/bazel-*
+/MODULE.bazel.lock.bak
+*.bazel.lock.tmp
+
+# --- .NET/MSBuild (cs.csproj) ---
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+/artifacts/
+/publish/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*.nupkg
+*.snupkg
+/packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+
+# --- IntelliJ IDEA / Rider ---
+/.idea/shelf/
+/.idea/workspace.xml
+/.idea/usage.statistics.xml
+/.idea/tasks.xml
+/.idea/dictionaries/
+/.idea/httpRequests/
+/.idea/copilot.data.*.xml
+/.idea/dataSources.local.xml
+/.idea/sqlDataSources.xml
+/.ijwb/.blaze/
+/.idea/.idea.*.dir/
+_ReSharper*/
+*.DotSettings.user
+.idea.cornkit.dir/
+
+# --- VSC ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# --- 清理随地拉 ---
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.directory
+
+# --- 日志/临时文件 ---
+*.log
+!src/**/testdata/**/*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
