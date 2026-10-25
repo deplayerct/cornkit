@@ -16,7 +16,7 @@ public class TimeTool
     /// <summary>
     /// 确定是记录时刻还是时间的关键bool
     /// </summary>
-    private bool _isDataTime;
+    private readonly bool _isDataTime;
 
     private int UtcOffset;
     private DateOnly Date;
@@ -64,8 +64,11 @@ public class TimeTool
     /// </summary>
     public void TimeRecord(DateOnly date, TimeOnly time)
     {
-        this.Date = date;
-        this.Time = time;
+        if (_isDataTime)
+        {
+            this.Date = date;
+            this.Time = time;
+        }
     }
     
     /// <summary>
@@ -75,12 +78,15 @@ public class TimeTool
     /// </summary>
     public void TimeRecord(int year, int month, int day, int hours, int minutes, int seconds)
     {
-        this.Year = year;
-        this.Month = month;
-        this.Day = day;
-        this.Hours = hours;
-        this.Minutes = minutes;
-        this.Seconds = seconds;
+        if (_isDataTime)
+        {
+            this.Year = year;
+            this.Month = month;
+            this.Day = day;
+            this.Hours = hours;
+            this.Minutes = minutes;
+            this.Seconds = seconds;
+        }
     }
     
     /// <summary>
@@ -89,8 +95,11 @@ public class TimeTool
     /// </summary>
     public void T2TRecord(DateTime startTime, DateTime endTime)
     {
-        this.StartTime = startTime;
-        this.EndTime = endTime;
+        if (_isDataTime == false)
+        {
+            this.StartTime = startTime;
+            this.EndTime = endTime;
+        }
     }
     
     /// <summary>
@@ -101,19 +110,21 @@ public class TimeTool
     public void T2TRecord(int year_start, int month_start, int day_start, int hours_start, int minutes_start, int seconds_start,
         int year_end, int month_end, int day_end, int hours_end, int minutes_end, int seconds_end)
     {
-        this.Year_START = year_start;
-        this.Month_START = month_start;
-        this.Day_START = day_start;
-        this.Hours_START = hours_start;
-        this.Minutes_START = minutes_start;
-        this.Seconds_START = seconds_start;
+        if (_isDataTime == false)
+        {
+            this.Year_START = year_start;
+            this.Month_START = month_start;
+            this.Day_START = day_start;
+            this.Hours_START = hours_start;
+            this.Minutes_START = minutes_start;
+            this.Seconds_START = seconds_start;
 
-        this.Year_END = year_end;
-        this.Month_END = month_end;
-        this.Day_END = day_end;
-        this.Hours_END = hours_end;
-        this.Minutes_END = minutes_end;
-        this.Seconds_END = seconds_end;
+            this.Year_END = year_end;
+            this.Month_END = month_end;
+            this.Day_END = day_end;
+            this.Hours_END = hours_end;
+            this.Minutes_END = minutes_end;
+            this.Seconds_END = seconds_end;
+        }
     }
-    
 }
