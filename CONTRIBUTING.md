@@ -12,9 +12,16 @@
 - 对于每一个模块，都最好对这个模块写一个模块版本号，特别是硬编码到源码，可以参考`cala.verinfo`。
 - 本项目是一个框架和API库，并不是很建议做实际完整社区平台应用工程实现，在做模板或教程代码的时候可以做一做。
 - 我们期望的文档是**新手开发者友好**的文档，所以example代码可以多一点
-- 对于每一个项目源码文件，都请在文件头部写明其在 `src` 目录中的位置，例如：`// @path: src/cscommunity/api/IUserCredentialStore.cs`
-- 对于每一个项目源码文件，都请在文件头部使用`/**/`方式粘贴LICENSE的内容。
-- ---------------------------
+- 对于每一个项目源码文件，都请在文件头部第一行使用SPDX-License-Identifier的方式标注LICENSE，例如：`// SPDX-License-Identifier: MIT`
+- 对于每一个项目源码文件，都请在文件头部第二行写明其在 `src` 目录中的位置，例如：`// @path: src/cs/community/api/IUserCredentialStore.cs`
+- 对于每一个项目源码文件，都请在文件头部第三行开始使用`/**/`写明版权信息和Authors信息，例如：
+    ```
+        /*
+        * Copyright (c) 2026 DeplayerCT
+        * Author : Deplayer515 <deplayer515@hotmail.com>
+        */
+    ```
+----------------------------
 - **请务必使用GPG/PGP等等的提交签名方式签名您的提交，否则，一律禁止推送，合并也会被拒绝。**<br>
   其配置并不难，请参考 [GitHub官方文档(从此章节开始一直往下看)](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)。<br>
   如果还看不懂，请参考这个速通文档：[GPG/PGP Github配置速通](https://blog.dejavu.moe/posts/gpg-verified-github/)。
@@ -180,7 +187,7 @@ fix bug
 
 - 采用这种方式来标记每个模块的版本号：`modulename m版本号.发布号.修订号`
 
-例如`database m1.0.0`
+    例如`database m1.0.0`
 ### 标签命名规则
 
 ```
@@ -252,10 +259,6 @@ cd cornkit
 - 重大变更需要更新README
 - 复杂功能需要在docs目录添加详细说明
 - 对于该项目的内部开发的一些文档，应写入devdocs目录
-
-## 🤝 社区行为准则
-
-参照DeplayerCTS 2026-0001，详见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
 
 ## 👑 贡献许可条款
 
